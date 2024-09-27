@@ -1,0 +1,189 @@
+/* Material Design 3 莫奈取色风格 */
+:root {
+    --primary-color: #f0d76ad3; /* 主色 */
+    --primary-light: #fce373c4; /* 较浅的主色 */
+    --primary-dark: #fbff00; /* 较深的主色 */
+    --surface-color: #F2F2F2; /* 表面颜色 */
+    --surface-elevated: #FFFFFF; /* 提升的表面颜色 */
+    --text-color: #000000; /* 文字颜色 */
+}
+
+/* 通用 MD3 样式 */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--surface-color);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    color: var(--text-color);
+}
+
+.md3-surface {
+    background-color: var(--surface-elevated);
+    border-radius: 12px;
+    padding: 16px;
+    margin: 16px;
+}
+
+.md3-elevation {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.toolbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 12px;
+    background-color: var(--primary-light);
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.md3-button {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    margin-right: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.md3-button .material-icons {
+    margin-right: 8px;
+}
+
+.md3-button:hover {
+    background-color: var(--primary-dark);
+}
+
+/* 选择框样式 */
+.md3-select {
+    font-family: 'Roboto', sans-serif;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--primary-light);
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+/* 输入框样式 */
+.md3-textarea {
+    width: 100%;
+    height: 400px;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid var(--primary-light);
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+    background-color: var(--surface-elevated);
+    color: var(--text-color);
+}
+
+/* 预览区域样式 */
+.preview {
+    background-color: var(--surface-color);
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+}
+
+.preview-button {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.preview h3 {
+    color: var(--primary-color);
+}
+
+/* ... 原来的样式代码 ... */
+
+/* 添加更多断点 */
+@media only screen and (max-width: 768px) {
+    /* 手机端样式 */
+    .editor-container {
+      flex-direction: column;
+    }
+    .toolbar, .editor, .preview {
+      width: 100%;
+    }
+  }
+  
+  @media only screen and (min-width: 769px) and (max-width: 991px) {
+    /* 平板端样式 */
+    /* ... */
+  }
+  
+  @media only screen and (min-width: 992px) {
+    /* 桌面端样式 */
+    /* ... */
+  }
+  
+  /* 字体设置 */
+  html {
+    font-size: 16px;
+  }
+  
+  .editor-container, .toolbar, .md3-button, .md3-select, .md3-textarea {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  /* 触摸优化 */
+  .md3-button {
+    padding: 12px 24px; /* 增大点击区域 */
+  }
+  
+  /* 代码高亮（示例，需要引入相关库） */
+  pre code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+    font-size: 0.8rem;
+    background: #f0f0f0;
+    padding: 16px;
+    border-radius: 4px;
+  }
+
+  /* ... 你原来的 CSS 代码 ... */
+
+/* 模态窗口样式 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
